@@ -1,5 +1,5 @@
 /* jslint node: true, esnext: true */
 "use strict";
 
-const MockReceiveInterceptor = require('./lib/mockReceiveInterceptor').MockReceiveInterceptor;
-exports.MockReceiveInterceptor = MockReceiveInterceptor;
+exports.MockReceiveInterceptor = require('./lib/mockReceiveInterceptor').MockReceiveInterceptor;
+exports.mochaInterceptorTest = require('./lib/mochaInterceptorTest').mochaInterceptorTest;
