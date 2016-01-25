@@ -5,3 +5,5 @@ exports.MockReceiveInterceptor = require('./lib/mockReceiveInterceptor').MockRec
 exports.mochaInterceptorTest = require('./lib/mochaInterceptorTest').mochaInterceptorTest;
 exports.testResponseHandler = require('./lib/mochaInterceptorTest').testResponseHandler;
 exports.TestInterceptor = require('./lib/mochaInterceptorTest').TestInterceptor;
+
+exports.mockReadStreamFactory = require('./lib/mockReadStream');
