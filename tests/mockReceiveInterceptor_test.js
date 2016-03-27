@@ -9,12 +9,9 @@ const chai = require('chai'),
   should = chai.should(),
   MockReceiveInterceptor = require('../index').MockReceiveInterceptor;
 
-
-
-describe('Message Handler', function () {
-
+describe('Message Handler', () => {
   it('Create', function (done) {
-    const exampleValidationFunction = function (request, oldRequest) {
+    const exampleValidationFunction = (request, oldRequest) => {
       assert.ok(request);
       done();
     };
@@ -23,6 +20,5 @@ describe('Message Handler', function () {
     mock.receive({
       "some": "thing"
     });
-
   });
 });
