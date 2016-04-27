@@ -4,13 +4,13 @@
   "description": "test support for kronos interceptors",
   "scripts": {
     "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests/*_test.js",
-    "doc": "jsdoc lib/*.js",
-    "test": "mocha tests/*_test.js",
+    "doc": "node ./node_modules/.bin/jsdoc lib/*.js",
+    "test": "node ./node_modules/.bin/mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-test-interceptor.git"
+    "url": "https://github.com/Kronos-Integration/kronos-test-interceptor.git"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/kronos-test-interceptor/issues"
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Kronos-Integration/kronos-test-interceptor#readme",
   "devDependencies": {
     "chai": "3.5.0",
-    "cz-conventional-changelog": "^1.1.5",
+    "cz-conventional-changelog": "1.1.6",
     "istanbul": "0.4.3",
     "jsdoc": "3.4.0",
     "mocha": "2.4.5",
@@ -36,7 +36,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=5"
+    "node": ">=6"
   },
   "dependencies": {
     "kronos-interceptor": "2.2.1",
@@ -46,5 +46,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "keywords": []
 }
