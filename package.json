@@ -36,7 +36,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=6"
+    "node": ">=6.1"
   },
   "dependencies": {
     "kronos-interceptor": "2.2.1",
