@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "kronos-interceptor": "2.2.1",
-    "loglevel-mixin": "1.4.0"
+    "loglevel-mixin": "1.4.1"
   },
   "config": {
     "commitizen": {
