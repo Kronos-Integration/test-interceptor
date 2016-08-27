@@ -39,7 +39,7 @@
     "node": ">=6.1"
   },
   "dependencies": {
-    "kronos-interceptor": "2.2.1",
+    "kronos-interceptor": "2.2.2",
     "loglevel-mixin": "^1.4.2"
   },
   "config": {
