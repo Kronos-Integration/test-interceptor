@@ -1,7 +1,7 @@
 /* global describe, it, xit */
 /* jslint node: true, esnext: true */
 
-"use strict";
+'use strict';
 
 const chai = require('chai'),
   assert = chai.assert,
@@ -18,7 +18,7 @@ describe('Message Handler', () => {
 
     const mock = new MockReceiveInterceptor(exampleValidationFunction);
     mock.receive({
-      "some": "thing"
+      some: 'thing'
     });
   });
 });
