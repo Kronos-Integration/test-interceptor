@@ -7,7 +7,9 @@ const chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should(),
-  MockReceiveInterceptor = require('../index').MockReceiveInterceptor;
+  {
+    MockReceiveInterceptor
+  } = require('../dist/module');
 
 describe('Message Handler', () => {
   it('Create', function (done) {

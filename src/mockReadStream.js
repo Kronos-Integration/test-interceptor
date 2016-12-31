@@ -57,6 +57,12 @@ class MockReadStream extends stream.Readable {
 		}
 	}
 }
-module.exports = function () {
+
+function mockReadStreamFactory() {
 	return new MockReadStream();
+}
+
+export {
+	mockReadStreamFactory,
+	MockReadStream
 };

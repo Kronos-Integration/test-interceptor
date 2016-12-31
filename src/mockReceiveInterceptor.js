@@ -3,9 +3,14 @@
 
 'use strict';
 
-const llm = require('loglevel-mixin'),
-  connectorMixin = require('kronos-interceptor').ConnectorMixin;
-
+import {
+  ConnectorMixin
+}
+from 'kronos-interceptor';
+import {
+  defineLogLevelProperties
+}
+from 'loglevel-mixin';
 
 // each endpoint has a step.
 // When creating an interceptor a logger is needed. This is done by the step.
@@ -15,11 +20,11 @@ const stepMock = {
 };
 
 // makes the step a logger
-llm.defineLogLevelProperties(stepMock);
+defineLogLevelProperties(stepMock);
 
 // Create the mock interceptor
 class _DummyInterceptor {}
-class MockReceiveInterceptor extends connectorMixin(_DummyInterceptor) {
+class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
 
   /**
    * Create a new MockReceiveInterseptor.
@@ -77,4 +82,6 @@ class MockReceiveInterceptor extends connectorMixin(_DummyInterceptor) {
 //
 // });
 
-module.exports.MockReceiveInterceptor = MockReceiveInterceptor;
+export {
+  MockReceiveInterceptor
+};
