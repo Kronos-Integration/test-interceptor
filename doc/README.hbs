@@ -19,29 +19,12 @@ kronos-test-interceptor
 test support for kronos interceptors
 
 # API Reference
+{{#modules~}}
+- {{name}}
+{{/modules}}
 
-* <a name="mochaInterceptorTest"></a>
-
-## mochaInterceptorTest(factory, ep, config, type, cp)
-**Kind**: global function  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| factory | <code>Class</code> | interceptor Class |
-| ep | <code>Endpoint</code> | endpoint to assign |
-| config | <code>Object</code> | to assing |
-| type | <code>String</code> | type identifier to use |
-| cp | <code>function</code> | for additional tests |
-
-
-* <a name="MockReceiveInterceptor+receive"></a>
-
-## mockReceiveInterceptor.receive()
-Receives the request from the interecptor before this one.
-Both parameters will be given to the validation function
-
-**Kind**: instance method of <code>[MockReceiveInterceptor](#MockReceiveInterceptor)</code>  
-
+{{#functions}}* {{>docs}}
+{{/functions}}
 * * *
 
 install

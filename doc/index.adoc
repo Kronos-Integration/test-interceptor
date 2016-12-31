@@ -1,2 +1,0 @@
-== kronos-test-interceptor
-Contains helper functions or classes for interceptor tests
