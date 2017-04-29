@@ -16,6 +16,8 @@
 
 kronos-test-interceptor
 =====
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kronos-Integration/kronos-test-interceptor.svg)](https://greenkeeper.io/)
 test support for kronos interceptors
 
 # API Reference
