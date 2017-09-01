@@ -5,49 +5,66 @@
   "main": "dist/module.js",
   "module": "src/module.js",
   "scripts": {
-    "cover": "npm run build && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports tests/*_test.js",
-    "test": "npm run build && node_modules/.bin/mocha tests/*_test.js && markdown-doctest",
+    "cover": "nyc npm test && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports tests/*_test.js",
+    "test": "mocha tests/*_test.js && node_modules/.bin/mocha tests/*_test.js && markdown-doctest",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "build": "node_modules/rollup/bin/rollup --output=dist/module.js -c -- src/module.js",
-    "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js > README.md"
+    "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
+    "precover": "rollup -c",
+    "pretest": "rollup -c",
+    "posttest": "markdown-doctest",
+    "prepare": "rollup -c"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-test-interceptor.git"
+    "url": "git+https://github.com/Kronos-Integration/kronos-test-interceptor.git"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/kronos-test-interceptor/issues"
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-test-interceptor#readme",
   "devDependencies": {
-    "chai": "^4.0.0",
-    "cz-conventional-changelog": "^2.0.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "semantic-release": "^7.0.1",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0",
+    "semantic-release": "^7.0.2",
     "jsdoc-to-markdown": "^3.0.0",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^0.47.0"
+    "rollup": "^0.49.2",
+    "nyc": "^11.1.0"
   },
-  "contributors": [{
-    "name": "Torsten Link",
-    "email": "torstenlink@gmx.de"
-  }, {
-    "name": "Markus Felten",
-    "email": "markus.felten@gmx.de"
-  }],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=6.9.2"
+    "node": ">=8.4.0"
   },
   "dependencies": {
     "kronos-interceptor": "^2.4.1",
     "loglevel-mixin": "^1.6.22"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "keywords": [
+    "test"
+  ],
+  "nyc": {
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "./coverage"
   },
-  "keywords": ["test"]
+  "template": {
+    "repository": {
+      "url": "https://github.com/Kronos-Tools/npm-package-template.git"
+    }
+  }
 }
