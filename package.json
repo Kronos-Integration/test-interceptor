@@ -5,8 +5,8 @@
   "main": "dist/module.js",
   "module": "src/module.js",
   "scripts": {
-    "cover": "nyc npm test && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports tests/*_test.js",
-    "test": "mocha tests/*_test.js && node_modules/.bin/mocha tests/*_test.js && markdown-doctest",
+    "cover": "nyc npm test && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports tests/*-test.js",
+    "test": "mocha tests/*-test.js && markdown-doctest",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "build": "node_modules/rollup/bin/rollup --output=dist/module.js -c -- src/module.js",
     "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
@@ -50,16 +50,10 @@
     "kronos-interceptor": "^2.4.1",
     "loglevel-mixin": "^1.6.22"
   },
-  "keywords": [
-    "test"
-  ],
+  "keywords": ["test"],
   "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "reporter": [
-      "lcov"
-    ],
+    "include": ["dist/**/*.js"],
+    "reporter": ["lcov"],
     "report-dir": "./coverage"
   },
   "template": {
