@@ -50,10 +50,16 @@
     "kronos-interceptor": "^2.4.1",
     "loglevel-mixin": "^2.0.1"
   },
-  "keywords": ["test"],
+  "keywords": [
+    "test"
+  ],
   "nyc": {
-    "include": ["dist/**/*.js"],
-    "reporter": ["lcov"],
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
     "report-dir": "./coverage"
   },
   "template": {

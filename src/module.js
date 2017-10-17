@@ -1,22 +1,12 @@
-/* jslint node: true, esnext: true */
-'use strict';
-
-import {
-  MockReceiveInterceptor
-}
-from './mockReceiveInterceptor';
+import { MockReceiveInterceptor } from './mock-receive-interceptor';
 
 import {
   TestInterceptor,
   testResponseHandler,
   mochaInterceptorTest
-}
-from './mochaInterceptorTest';
+} from './mocha-interceptor-test';
 
-import {
-  mockReadStreamFactory
-} 
-from './mockReadStream';
+import { mockReadStreamFactory } from './mock-read-stream';
 
 export {
   MockReceiveInterceptor,

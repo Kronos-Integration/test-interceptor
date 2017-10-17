@@ -1,16 +1,5 @@
-/* global describe, it, xit */
-/* jslint node: true, esnext: true */
-
-'use strict';
-
-import {
-  ConnectorMixin
-}
-from 'kronos-interceptor';
-import {
-  defineLogLevelProperties
-}
-from 'loglevel-mixin';
+import { ConnectorMixin } from 'kronos-interceptor';
+import { defineLogLevelProperties } from 'loglevel-mixin';
 
 // each endpoint has a step.
 // When creating an interceptor a logger is needed. This is done by the step.
@@ -25,7 +14,6 @@ defineLogLevelProperties(stepMock);
 // Create the mock interceptor
 class _DummyInterceptor {}
 class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
-
   /**
    * Create a new MockReceiveInterseptor.
    * @param validateFunction {function} The function which will validate later on the received data
@@ -47,12 +35,11 @@ class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
    * Receives the request from the interecptor before this one.
    * Both parameters will be given to the validation function
    */
-  receive(request, oldRequest) {
+  async receive(request, oldRequest) {
     // This is a dummy implementation. Must be overwritten by the derived object.
     this.validateFunction(request, oldRequest);
 
-    // creates a success promise
-    return Promise.resolve(this);
+    return this;
   }
 }
 
@@ -82,6 +69,4 @@ class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
 //
 // });
 
-export {
-  MockReceiveInterceptor
-};
+export { MockReceiveInterceptor };

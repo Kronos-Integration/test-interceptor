@@ -1,20 +1,11 @@
-/* global describe, it, xit */
-/* jslint node: true, esnext: true */
-
-'use strict';
-
 const chai = require('chai'),
   assert = chai.assert,
   expect = chai.expect,
   should = chai.should();
 
-import {
-  Interceptor
-}
-from 'kronos-interceptor';
+import { Interceptor } from 'kronos-interceptor';
 
 class TestInterceptor extends Interceptor {
-
   static get name() {
     return 'test-interceptor';
   }
@@ -26,7 +17,6 @@ class TestInterceptor extends Interceptor {
     return super.receive(request, oldRequest);
   }
 }
-
 
 /**
  * @param {Class} factory interceptor Class
@@ -83,8 +73,9 @@ function mochaInterceptorTest(Factory, ep, config, type, cb) {
     }
   }
 
-  describe(`${Factory.name} creation`, function () {
-    describe('without config', () => checkInterceptor(new Factory(undefined, ep), false));
+  describe(`${Factory.name} creation`, function() {
+    describe('without config', () =>
+      checkInterceptor(new Factory(undefined, ep), false));
 
     describe('with config', () => checkInterceptor(itc, true));
   });
@@ -95,7 +86,10 @@ function mochaInterceptorTest(Factory, ep, config, type, cb) {
 function testResponseHandler(request) {
   return new Promise((fullfilled, rejected) => {
     if (request.delay) {
-      setTimeout(() => request.reject ? rejected(request) : fullfilled(request), request.delay);
+      setTimeout(
+        () => (request.reject ? rejected(request) : fullfilled(request)),
+        request.delay
+      );
     } else {
       if (request.reject) {
         rejected(request);
@@ -106,8 +100,4 @@ function testResponseHandler(request) {
   });
 }
 
-export {
-  TestInterceptor,
-  testResponseHandler,
-  mochaInterceptorTest
-};
+export { TestInterceptor, testResponseHandler, mochaInterceptorTest };
