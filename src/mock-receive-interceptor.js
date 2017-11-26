@@ -11,9 +11,7 @@ const stepMock = {
 // makes the step a logger
 defineLogLevelProperties(stepMock);
 
-// Create the mock interceptor
-class _DummyInterceptor {}
-class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
+export class MockReceiveInterceptor extends ConnectorMixin(class {}) {
   /**
    * Create a new MockReceiveInterseptor.
    * @param validateFunction {function} The function which will validate later on the received data
@@ -21,14 +19,11 @@ class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
   constructor(validateFunction) {
     super();
 
-    // stores the validation function as a property
-    const props = {
+    Object.defineProperties(this, {
       validateFunction: {
         value: validateFunction
       }
-    };
-
-    Object.defineProperties(this, props);
+    });
   }
 
   /**
@@ -68,5 +63,3 @@ class MockReceiveInterceptor extends ConnectorMixin(_DummyInterceptor) {
 //   done();
 //
 // });
-
-export { MockReceiveInterceptor };

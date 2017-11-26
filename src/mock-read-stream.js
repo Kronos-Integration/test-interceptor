@@ -25,7 +25,7 @@ const stream = require('stream');
 
  */
 
-class MockReadStream extends stream.Readable {
+export class MockReadStream extends stream.Readable {
   constructor() {
     super({
       objectMode: true,
@@ -53,8 +53,6 @@ class MockReadStream extends stream.Readable {
   }
 }
 
-function mockReadStreamFactory() {
+export function mockReadStreamFactory() {
   return new MockReadStream();
 }
-
-export { mockReadStreamFactory, MockReadStream };
