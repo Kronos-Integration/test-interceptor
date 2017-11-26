@@ -3,8 +3,8 @@ import { MockReceiveInterceptor } from './mock-receive-interceptor';
 import {
   TestInterceptor,
   testResponseHandler,
-  mochaInterceptorTest
-} from './mocha-interceptor-test';
+  interceptorTest
+} from './ava-interceptor';
 
 import { mockReadStreamFactory } from './mock-read-stream';
 
@@ -12,6 +12,6 @@ export {
   MockReceiveInterceptor,
   TestInterceptor,
   testResponseHandler,
-  mochaInterceptorTest,
+  interceptorTest,
   mockReadStreamFactory
 };

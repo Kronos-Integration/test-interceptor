@@ -1,22 +1,5 @@
-const chai = require('chai'),
-  assert = chai.assert,
-  expect = chai.expect,
-  should = chai.should();
-
 import { Interceptor } from 'kronos-interceptor';
-
-class TestInterceptor extends Interceptor {
-  static get name() {
-    return 'test-interceptor';
-  }
-
-  receive(request, oldRequest) {
-    if (!request.hops) request.hops = [];
-    request.hops.push(this.config.name);
-
-    return super.receive(request, oldRequest);
-  }
-}
+import test from 'ava';
 
 /**
  * @param {Class} factory interceptor Class
@@ -25,6 +8,22 @@ class TestInterceptor extends Interceptor {
  * @param {String} type type identifier to use
  * @param {Function} cp for additional tests
  */
+export function interceptorTest(t, Factory, endpoint, config, type) {
+  const instance = new Factory(undefined, endpoint);
+
+  t.is(Factory.name, type);
+  t.is(instance.type, type);
+  t.is(instance.endpoint, endpoint);
+
+  instance.reset();
+}
+
+interceptorTest.title = (providedTitle, Factory, endpoint, config, type) =>
+  `${providedTitle} ${type}`.trim();
+
+//test('providedTitle', interceptorTest, Factory, endpoint, config, type);
+
+/*
 function mochaInterceptorTest(Factory, ep, config, type, cb) {
   const itc = new Factory(config, ep);
 
@@ -82,9 +81,23 @@ function mochaInterceptorTest(Factory, ep, config, type, cb) {
 
   return itc;
 }
+*/
 
-function testResponseHandler(request) {
-  return new Promise((fullfilled, rejected) => {
+export class TestInterceptor extends Interceptor {
+  static get name() {
+    return 'test-interceptor';
+  }
+
+  receive(request, oldRequest) {
+    if (!request.hops) request.hops = [];
+    request.hops.push(this.config.name);
+
+    return super.receive(request, oldRequest);
+  }
+}
+
+export function testResponseHandler(request) {
+  return new Promise((resolve, reject) => {
     if (request.delay) {
       setTimeout(
         () => (request.reject ? rejected(request) : fullfilled(request)),
@@ -92,12 +105,10 @@ function testResponseHandler(request) {
       );
     } else {
       if (request.reject) {
-        rejected(request);
+        reject(request);
       } else {
-        fullfilled(request);
+        resolve(request);
       }
     }
   });
 }
-
-export { TestInterceptor, testResponseHandler, mochaInterceptorTest };

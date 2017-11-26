@@ -2,7 +2,7 @@ import pkg from './package.json';
 
 export default {
   plugins: [],
-  external: ['kronos-interceptor', 'loglevel-mixin'],
+  external: ['ava', 'kronos-interceptor', 'loglevel-mixin'],
   input: pkg.module,
 
   output: {
