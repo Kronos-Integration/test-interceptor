@@ -1,6 +1,8 @@
 import { Interceptor } from 'kronos-interceptor';
 import test from 'ava';
 
+async function dummy() {}
+
 /**
  * @param {Class} factory interceptor Class
  * @param {Endpoint} ep endpoint to assign
@@ -8,14 +10,33 @@ import test from 'ava';
  * @param {String} type type identifier to use
  * @param {Function} cp for additional tests
  */
-export function interceptorTest(t, Factory, endpoint, config, type) {
+export async function interceptorTest(
+  t,
+  Factory,
+  endpoint,
+  config,
+  type,
+  further = dummy
+) {
+  t.is(Factory.name, type);
+
   const instance = new Factory(undefined, endpoint);
 
-  t.is(Factory.name, type);
   t.is(instance.type, type);
   t.is(instance.endpoint, endpoint);
 
   instance.reset();
+
+  await further(t, instance, false);
+
+  const instanceWithConfig = new Factory(config, endpoint);
+
+  t.is(instanceWithConfig.type, type);
+  t.is(instanceWithConfig.endpoint, endpoint);
+
+  instanceWithConfig.reset();
+
+  await further(t, instanceWithConfig, true);
 }
 
 interceptorTest.title = (providedTitle, Factory, endpoint, config, type) =>
@@ -100,7 +121,7 @@ export function testResponseHandler(request) {
   return new Promise((resolve, reject) => {
     if (request.delay) {
       setTimeout(
-        () => (request.reject ? rejected(request) : fullfilled(request)),
+        () => (request.reject ? resolve(request) : reject(request)),
         request.delay
       );
     } else {
