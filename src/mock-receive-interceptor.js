@@ -1,15 +1,4 @@
 import { ConnectorMixin } from 'kronos-interceptor';
-import { defineLogLevelProperties } from 'loglevel-mixin';
-
-// each endpoint has a step.
-// When creating an interceptor a logger is needed. This is done by the step.
-const stepMock = {
-  name: 'dummy step name',
-  type: 'dummy step type'
-};
-
-// makes the step a logger
-defineLogLevelProperties(stepMock);
 
 export class MockReceiveInterceptor extends ConnectorMixin(class {}) {
   /**
