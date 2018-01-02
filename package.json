@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "ava": "^0.24.0",
-    "kronos-endpoint": "^2.14.14",
+    "kronos-endpoint": "^2.14.15",
     "markdown-doctest": "^0.9.1",
     "nyc": "^11.4.1",
     "rollup": "^0.53.2",
