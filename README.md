@@ -16,7 +16,7 @@
 [![downloads](http://img.shields.io/npm/dm/kronos-test-interceptor.svg?style=flat-square)](https://npmjs.org/package/kronos-test-interceptor)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-kronos-test-interceptor
+@kronos-integration/test-interceptor
 =====
 test support for kronos interceptors
 
@@ -25,7 +25,7 @@ test support for kronos interceptors
 * <a name="mochaInterceptorTest"></a>
 
 ## mochaInterceptorTest(factory, ep, config, type, cp)
-**Kind**: global function  
+**Kind**: global function
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -42,7 +42,7 @@ test support for kronos interceptors
 Receives the request from the interecptor before this one.
 Both parameters will be given to the validation function
 
-**Kind**: instance method of <code>[MockReceiveInterceptor](#MockReceiveInterceptor)</code>  
+**Kind**: instance method of <code>[MockReceiveInterceptor](#MockReceiveInterceptor)</code>
 
 * * *
 
@@ -52,7 +52,7 @@ install
 With [npm](http://npmjs.org) do:
 
 ```shell
-npm install kronos-test-interceptor
+npm install @kronos-integration/test-interceptor
 ```
 
 license
