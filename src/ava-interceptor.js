@@ -4,11 +4,12 @@ import test from 'ava';
 async function dummy() {}
 
 /**
- * @param {Class} factory interceptor Class
- * @param {Endpoint} ep endpoint to assign
+ * @param {ava} t ava test runner
+ * @param {Class} Factory interceptor Class
+ * @param {Endpoint} endpoint endpoint to assign
  * @param {Object} config to assing
- * @param {String} type type identifier to use
- * @param {Function} cp for additional tests
+ * @param {string} type type identifier to use
+ * @param {Function} further for additional tests
  */
 export async function interceptorTest(
   t,

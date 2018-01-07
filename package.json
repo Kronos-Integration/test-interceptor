@@ -7,7 +7,9 @@
   "main": "dist/module.js",
   "module": "src/module.js",
   "description": "test support for kronos interceptors",
-  "keywords": ["test"],
+  "keywords": [
+    "test"
+  ],
   "contributors": [
     {
       "name": "Torsten Link",
@@ -48,23 +50,31 @@
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/Kronos-Integration/kronos-test-interceptor.git"
+    "url": "git+https://github.com/Kronos-Integration/kronos-test-interceptor.git"
   },
   "bugs": {
-    "url":
-      "https://github.com/Kronos-Integration/kronos-test-interceptor/issues"
+    "url": "https://github.com/Kronos-Integration/kronos-test-interceptor/issues"
   },
-  "homepage":
-    "https://github.com/Kronos-Integration/kronos-test-interceptor#readme",
+  "homepage": "https://github.com/Kronos-Integration/kronos-test-interceptor#readme",
   "ava": {
-    "files": ["build/*-test.js"],
-    "presets": ["env"],
-    "require": ["babel-register"]
+    "files": [
+      "build/*-test.js"
+    ],
+    "presets": [
+      "env"
+    ],
+    "require": [
+      "babel-register"
+    ]
   },
   "nyc": {
-    "include": ["build/*-test.js", "src/**/*.js"],
-    "reporter": ["lcov"],
+    "include": [
+      "build/*-test.js",
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
     "report-dir": "./build/coverage"
   },
   "xo": {
