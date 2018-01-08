@@ -50,12 +50,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-test-interceptor.git"
+    "url": "git+https://github.com/Kronos-Integration/test-interceptor.git"
   },
   "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-test-interceptor/issues"
+    "url": "https://github.com/Kronos-Integration/test-interceptor/issues"
   },
-  "homepage": "https://github.com/Kronos-Integration/kronos-test-interceptor#readme",
+  "homepage": "https://github.com/Kronos-Integration/test-interceptor#readme",
   "ava": {
     "files": [
       "build/*-test.js"
