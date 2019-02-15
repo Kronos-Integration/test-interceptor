@@ -1,4 +1,4 @@
-const stream = require('stream');
+import { Readable } from 'stream';
 
 /**
  * Simulates a dummy readable stream.
@@ -25,7 +25,7 @@ const stream = require('stream');
 
  */
 
-export class MockReadStream extends stream.Readable {
+export class MockReadStream extends Readable {
   constructor() {
     super({
       objectMode: true,
@@ -51,8 +51,4 @@ export class MockReadStream extends stream.Readable {
       this.push(null);
     }
   }
-}
-
-export function mockReadStreamFactory() {
-  return new MockReadStream();
 }

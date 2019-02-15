@@ -6,12 +6,12 @@ import {
   interceptorTest
 } from './ava-interceptor';
 
-import { mockReadStreamFactory } from './mock-read-stream';
+import { MockReadStream } from './mock-read-stream';
 
 export {
   MockReceiveInterceptor,
   TestInterceptor,
   testResponseHandler,
   interceptorTest,
-  mockReadStreamFactory
+  MockReadStream
 };

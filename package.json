@@ -4,8 +4,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/module.js",
-  "module": "src/module.js",
+  "main": "src/module.mjs",
+  "module": "src/module.mjs",
   "description": "test support for kronos interceptors",
   "keywords": [
     "test"
@@ -23,8 +23,8 @@
   "license": "BSD-2-Clause",
   "scripts": {
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
-    "docs": "documentation readme src/module.js --section=API",
-    "lint": "documentation lint src/module.js",
+    "docs": "documentation readme src/module.mjs --section=API",
+    "lint": "documentation lint src/module.mjs",
     "posttest": "markdown-doctest && npm run prepare",
     "test": "ava"
   },
