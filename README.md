@@ -6,11 +6,9 @@
 [![codecov.io](http://codecov.io/github/Kronos-Integration/test-interceptor/coverage.svg?branch=master)](http://codecov.io/github/Kronos-Integration/test-interceptor?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/test-interceptor/badge.svg)](https://snyk.io/test/github/Kronos-Integration/test-interceptor)
 [![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/test-interceptor.svg?style=flat-square)](https://github.com/Kronos-Integration/test-interceptor/issues)
-[![Stories in Ready](https://badge.waffle.io/Kronos-Integration/test-interceptor.svg?label=ready&title=Ready)](http://waffle.io/Kronos-Integration/test-interceptor)
 [![Dependency Status](https://david-dm.org/Kronos-Integration/test-interceptor.svg)](https://david-dm.org/Kronos-Integration/test-interceptor)
 [![devDependency Status](https://david-dm.org/Kronos-Integration/test-interceptor/dev-status.svg)](https://david-dm.org/Kronos-Integration/test-interceptor#info=devDependencies)
 [![docs](http://inch-ci.org/github/Kronos-Integration/test-interceptor.svg?branch=master)](http://inch-ci.org/github/Kronos-Integration/test-interceptor)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![downloads](http://img.shields.io/npm/dm/test-interceptor.svg?style=flat-square)](https://npmjs.org/package/test-interceptor)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
