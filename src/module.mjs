@@ -1,17 +1,9 @@
-import { MockReceiveInterceptor } from './mock-receive-interceptor';
+export { MockReceiveInterceptor } from './mock-receive-interceptor.mjs';
 
-import {
+export {
   TestInterceptor,
   testResponseHandler,
   interceptorTest
-} from './ava-interceptor';
+} from './ava-interceptor.mjs';
 
-import { MockReadStream } from './mock-read-stream';
-
-export {
-  MockReceiveInterceptor,
-  TestInterceptor,
-  testResponseHandler,
-  interceptorTest,
-  MockReadStream
-};
+export { MockReadStream } from './mock-read-stream.mjs';
