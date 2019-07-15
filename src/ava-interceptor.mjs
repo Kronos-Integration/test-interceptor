@@ -1,4 +1,4 @@
-import { Interceptor } from 'kronos-interceptor';
+//import { Interceptor } from 'kronos-interceptor';
 import test from 'ava';
 
 async function dummy() {}
@@ -105,6 +105,7 @@ function mochaInterceptorTest(Factory, ep, config, type, cb) {
 }
 */
 
+/*
 export class TestInterceptor extends Interceptor {
   static get name() {
     return 'test-interceptor';
@@ -134,3 +135,4 @@ export function testResponseHandler(request) {
     }
   });
 }
+*/

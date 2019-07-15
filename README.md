@@ -22,32 +22,17 @@ test support for kronos interceptors
 
 ### Table of Contents
 
--   [MockReceiveInterceptor](#mockreceiveinterceptor)
-    -   [receive](#receive)
 -   [interceptorTest](#interceptortest)
+    -   [Parameters](#parameters)
 -   [MockReadStream](#mockreadstream)
-
-## MockReceiveInterceptor
-
-**Extends ConnectorMixin(class {})**
-
-**Parameters**
-
--   `validateFunction`  {Function} The function which will validate later on the received data
-
-### receive
-
-Receives the request from the interecptor before this one.
-Both parameters will be given to the validation function
-
-**Parameters**
-
--   `request`  
--   `oldRequest`  
+-   [MockReceiveInterceptor](#mockreceiveinterceptor)
+    -   [Parameters](#parameters-1)
+    -   [receive](#receive)
+        -   [Parameters](#parameters-2)
 
 ## interceptorTest
 
-**Parameters**
+### Parameters
 
 -   `t` **ava** ava test runner
 -   `Factory` **Class** interceptor Class
@@ -58,7 +43,7 @@ Both parameters will be given to the validation function
 
 ## MockReadStream
 
-**Extends stream.Readable**
+**Extends Readable**
 
 Simulates a dummy readable stream.
 
@@ -81,6 +66,24 @@ dummyStream.pipe(filter).on('data', function (line) {
  .on('end', function () {
 	 verifyFunction(false, lines);
  });
+
+## MockReceiveInterceptor
+
+**Extends ConnectorMixin(class {})**
+
+### Parameters
+
+-   `validateFunction`  {Function} The function which will validate later on the received data
+
+### receive
+
+Receives the request from the interecptor before this one.
+Both parameters will be given to the validation function
+
+#### Parameters
+
+-   `request`  
+-   `oldRequest`  
 
 # install
 
