@@ -25,29 +25,3 @@ export class MockReceiveInterceptor extends ConnectorMixin(class {}) {
     return this;
   }
 }
-
-// --------------------------------------------
-// Example for a validation function
-// --------------------------------------------
-// const exampleValidationFunction = function (request, oldRequest) {
-//   assert.ok(request);
-//   assert.equal(request.hops.length, 1);
-//   assert.ok(request.hops[0].host);
-//   assert.ok(request.hops[0].id);
-//   assert.ok(request.hops[0].time);
-//
-//   delete(request.hops[0].host);
-//   delete(request.hops[0].id);
-//   delete(request.hops[0].time);
-//
-//   assert.deepEqual(request, {
-//     "hops": [{
-//       "stepName": "dummy step name",
-//       "stepType": "dummy step type"
-//     }],
-//     "info": "first message",
-//     "payload": {}
-//   });
-//   done();
-//
-// });
