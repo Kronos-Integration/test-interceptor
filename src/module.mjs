@@ -1,6 +1,4 @@
 export {
-  TestInterceptor,
-  testResponseHandler,
   interceptorTest
 } from './ava-interceptor.mjs';
 
