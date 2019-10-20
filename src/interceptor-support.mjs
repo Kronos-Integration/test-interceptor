@@ -1,4 +1,4 @@
 
-async function dummyResponseHandler(request, oldRequest) {
+export async function dummyResponseHandler(request, oldRequest) {
   return request;
 }
