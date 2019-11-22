@@ -1,11 +1,11 @@
-import { ConnectorMixin } from 'kronos-interceptor';
+import { ConnectorMixin } from "@kronos-integration/interceptor";
 
 /**
  * @param validateFunction {Function} The function which will validate later on the received data
  */
 export class MockReceiveInterceptor extends ConnectorMixin(class {}) {
-  constructor(validateFunction) {
-    super();
+  constructor(endpoint, validateFunction) {
+    super(endpoint);
 
     Object.defineProperties(this, {
       validateFunction: {

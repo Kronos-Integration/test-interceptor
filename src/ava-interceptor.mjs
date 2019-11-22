@@ -19,7 +19,7 @@ export async function interceptorTest(
 ) {
   t.is(Factory.name, type);
 
-  const instance = new Factory(undefined, endpoint);
+  const instance = new Factory(endpoint, undefined);
 
   t.is(instance.type, type);
   t.is(instance.endpoint, endpoint);
@@ -28,7 +28,7 @@ export async function interceptorTest(
 
   await further(t, instance, false);
 
-  const instanceWithConfig = new Factory(config, endpoint);
+  const instanceWithConfig = new Factory(endpoint, config);
 
   t.is(instanceWithConfig.type, type);
   t.is(instanceWithConfig.endpoint, endpoint);
