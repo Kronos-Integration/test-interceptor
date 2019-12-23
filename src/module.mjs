@@ -35,11 +35,12 @@ export const testResponseHandler = {
 
 /**
  * @param {ava} t ava test runner
- * @param {Class} Factory interceptor Class
- * @param {Endpoint} endpoint endpoint to assign
+ * @param {Class} factory interceptor Class
  * @param {Object} config to assing
- * @param {string} type type identifier to use
- * @param {Function} further for additional tests
+ * @param {any} expected
+ * @param {Endpoint} endpoint endpoint to assign
+ * @param {Array} args
+ * @param {Function} next
  */
 export async function interceptorTest(
   t,

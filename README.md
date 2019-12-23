@@ -23,66 +23,19 @@ test support for kronos interceptors
 
 -   [interceptorTest](#interceptortest)
     -   [Parameters](#parameters)
--   [MockReadStream](#mockreadstream)
--   [MockReceiveInterceptor](#mockreceiveinterceptor)
-    -   [Parameters](#parameters-1)
-    -   [receive](#receive)
-        -   [Parameters](#parameters-2)
 
 ## interceptorTest
 
 ### Parameters
 
 -   `t` **ava** ava test runner
--   `Factory` **Class** interceptor Class
--   `endpoint` **Endpoint** endpoint to assign
+-   `factory` **Class** interceptor Class
 -   `config` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** to assing
--   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** type identifier to use
--   `further` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** for additional tests (optional, default `dummy`)
-
-## MockReadStream
-
-**Extends Readable**
-
-Simulates a dummy readable stream.
-
-// Stores the result of the filter
-let lines = \[];
-
-const dummyStream = mockReadStreamFactory();
-dummyStream.add({"name": "Matt"});
-dummyStream.add({"last_name": "Herbert"});
-const filter = streamConsumer(opts);
-dummyStream.pipe(filter).on('data', function (line) {
-	 lines.push(line);
- })
- .on('error', function (err) {
-	 verifyFunction(err, lines);
- })
- .on('header', function (header) {
-	 //console.log(header);
- })
- .on('end', function () {
-	 verifyFunction(false, lines);
- });
-
-## MockReceiveInterceptor
-
-**Extends ConnectorMixin(class {})**
-
-### Parameters
-
--   `validateFunction`  {Function} The function which will validate later on the received data
-
-### receive
-
-Receives the request from the interecptor before this one.
-Both parameters will be given to the validation function
-
-#### Parameters
-
--   `request`  
--   `oldRequest`  
+-   `expected` **any**  (optional, default `{}`)
+-   `endpoint` **Endpoint** endpoint to assign
+-   `args` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)**  (optional, default `[]`)
+-   `next` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)**  (optional, default `(...args)=>0`)
+-   `asserts`   (optional, default `()=>{}`)
 
 # install
 
