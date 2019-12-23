@@ -1,10 +1,7 @@
 import test from 'ava';
 
-/*
-import { Interceptor } from 'kronos-interceptor';
-import { Endpoint } from 'kronos-endpoint';
-*/
-import { interceptorTest } from '../src/ava-interceptor.mjs';
+
+import { interceptorTest } from '../src/module.mjs';
 
 test('simple', t => {
   t.pass();
