@@ -1,7 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/Kronos-Integration/test-interceptor.png)](http://travis-ci.org/Kronos-Integration/test-interceptor)
 [![codecov.io](http://codecov.io/github/Kronos-Integration/test-interceptor/coverage.svg?branch=master)](http://codecov.io/github/Kronos-Integration/test-interceptor?branch=master)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![downloads](http://img.shields.io/npm/dm/test-interceptor.svg?style=flat-square)](https://npmjs.org/package/test-interceptor)
+[![downloads](http://img.shields.io/npm/dm/@kronos-integration/test-interceptor.svg?style=flat-square)](https://npmjs.org/package/@kronos-integration/test-interceptor)
 [![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/test-interceptor.svg?style=flat-square)](https://github.com/Kronos-Integration/test-interceptor/issues)
 [![Greenkeeper](https://badges.greenkeeper.io/Kronos-Integration/test-interceptor.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/test-interceptor/badge.svg)](https://snyk.io/test/github/Kronos-Integration/test-interceptor)
