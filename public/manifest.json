@@ -1,0 +1,10 @@
+{
+  "name": "@kronos-integration/test-interceptor",
+  "description": "test support for kronos interceptors",
+  "icons": [
+    {
+      "src": "facicon.ico",
+      "sizes": "16x16"
+    }
+  ]
+}
