@@ -30,10 +30,9 @@
     "test": "ava"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.3.0",
     "c8": "^7.1.0",
     "documentation": "^12.1.4",
-    "esm": "^3.2.25",
     "kronos-endpoint": "^2.14.15",
     "semantic-release": "^17.0.2"
   },
@@ -48,19 +47,6 @@
     "url": "https://github.com/Kronos-Integration/test-interceptor/issues"
   },
   "homepage": "https://github.com/Kronos-Integration/test-interceptor#readme",
-  "ava": {
-    "files": [
-      "tests/*-test.mjs"
-    ],
-    "require": [
-      "esm"
-    ],
-    "babel": false,
-    "compileEnhancements": false,
-    "extensions": [
-      "mjs"
-    ]
-  },
   "template": {
     "repository": {
       "url": "https://github.com/arlac77/npm-package-template-esm-only.git"
