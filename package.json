@@ -32,7 +32,7 @@
   "devDependencies": {
     "ava": "^3.6.0",
     "c8": "^7.1.0",
-    "documentation": "^12.2.0",
+    "documentation": "^12.3.0",
     "kronos-endpoint": "^2.14.15",
     "semantic-release": "^17.0.4"
   },
