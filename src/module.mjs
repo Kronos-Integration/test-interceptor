@@ -3,10 +3,16 @@ export async function wait(msecs = 1000) {
 }
 
 export const logger = {
+  trace(a) {
+    console.log(a);
+  },
   debug(a) {
     console.log(a);
   },
   error(a) {
+    console.log(a);
+  },
+  warn(a) {
     console.log(a);
   },
   info(a) {
@@ -56,13 +62,13 @@ export async function interceptorTest(
 
   instance.reset();
 
-  for (const name of Object.keys(expected)) {
+  for (const [name, exp] of Object.entries(expected)) {
     switch (name) {
       case "json":
-        t.deepEqual(instance.toJSON(), expected[name], "json");
+        t.deepEqual(instance.toJSON(), exp, name);
         break;
       default:
-        t.is(instance[name], expected[name], name);
+        t.is(instance[name], exp, name);
     }
   }
 
