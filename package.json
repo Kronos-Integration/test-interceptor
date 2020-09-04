@@ -50,6 +50,6 @@
   },
   "homepage": "https://github.com/Kronos-Integration/test-interceptor#readme",
   "template": {
-    "inheritFrom": "arlac77/template-esm-only"
+    "inheritFrom": []
   }
 }
