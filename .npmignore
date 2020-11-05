@@ -7,3 +7,4 @@ doc
 .tmp
 .vscode
 .github
+.travis.yml
