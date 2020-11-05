@@ -41,7 +41,7 @@
     "semantic-release": "^17.2.2"
   },
   "engines": {
-    "node": ">=14.5.0"
+    "node": ">=14.15.0"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,9 @@
   },
   "homepage": "https://github.com/Kronos-Integration/test-interceptor#readme",
   "template": {
-    "inheritFrom": "arlac77/template-esm-only"
+    "inheritFrom": [
+      "arlac77/template-github",
+      "arlac77/template-kronos-component"
+    ]
   }
 }
