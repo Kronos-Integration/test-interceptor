@@ -74,7 +74,7 @@ export async function interceptorTest(
 
   const result = await instance.receive(endpoint, next, ...args);
 
-  asserts(t, instance, endpoint, next, result);
+  asserts(t, instance, endpoint, next, result, ...args);
 }
 
 interceptorTest.title = (providedTitle, factory, config, expected) =>
