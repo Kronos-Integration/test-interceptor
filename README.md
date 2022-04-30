@@ -2,12 +2,12 @@
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![minified size](https://badgen.net/bundlephobia/min/@kronos-integration/test-interceptor)](https://bundlephobia.com/result?p=@kronos-integration/test-interceptor)
 [![downloads](http://img.shields.io/npm/dm/@kronos-integration/test-interceptor.svg?style=flat-square)](https://npmjs.org/package/@kronos-integration/test-interceptor)
-[![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/test-interceptor.svg?style=flat-square)](https://github.com/Kronos-Integration/test-interceptor/issues)
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FKronos-Integration%2Ftest-interceptor%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/Kronos-Integration/test-interceptor/goto)
+[![GitHub Issues](https://img.shields.io/github/issues/test-interceptor/test-interceptor.svg?style=flat-square)](https://github.com/test-interceptor/test-interceptor/issues)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Ftest-interceptor%2Ftest-interceptor%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/test-interceptor/test-interceptor/goto)
 [![Styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/test-interceptor/badge.svg)](https://snyk.io/test/github/Kronos-Integration/test-interceptor)
-[![Coverage Status](https://coveralls.io/repos/Kronos-Integration/test-interceptor/badge.svg)](https://coveralls.io/github/Kronos-Integration/test-interceptor)
+[![Known Vulnerabilities](https://snyk.io/test/github/test-interceptor/test-interceptor/badge.svg)](https://snyk.io/test/github/test-interceptor/test-interceptor)
+[![Coverage Status](https://coveralls.io/repos/test-interceptor/test-interceptor/badge.svg)](https://coveralls.io/github/test-interceptor/test-interceptor)
 
 # @kronos-integration/test-interceptor
 
