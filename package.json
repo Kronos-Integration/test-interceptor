@@ -35,7 +35,7 @@
     "c8": "^8.0.1",
     "documentation": "^14.0.2",
     "kronos-endpoint": "^2.14.15",
-    "semantic-release": "^22.0.0"
+    "semantic-release": "^22.0.1"
   },
   "engines": {
     "node": ">=20.6.1"
