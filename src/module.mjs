@@ -3,21 +3,11 @@ export async function wait(msecs = 1000) {
 }
 
 export const logger = {
-  trace(a) {
-    console.log(a);
-  },
-  debug(a) {
-    console.log(a);
-  },
-  error(a) {
-    console.log(a);
-  },
-  warn(a) {
-    console.log(a);
-  },
-  info(a) {
-    console.log(a);
-  }
+  error: (...args) => console.log(...args),
+  warn: (...args) => console.log(...args),
+  info: (...args) => console.log(...args),
+  debug: (...args) => console.log(...args),
+  trace: (...args) => console.log(...args)
 };
 
 export function dummyEndpoint(name, owner = logger) {
