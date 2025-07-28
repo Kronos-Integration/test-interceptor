@@ -1,6 +1,4 @@
 import test from 'ava';
-
-
 import { interceptorTest } from '../src/module.mjs';
 
 test('simple', t => {
