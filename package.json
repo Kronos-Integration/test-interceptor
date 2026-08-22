@@ -57,6 +57,6 @@
   },
   "dependencies": {
     "@kronos-integration/endpoint": "^11.2.0",
-    "@kronos-integration/interceptor": "^13.3.7"
+    "@kronos-integration/interceptor": "^13.4.0"
   }
 }
