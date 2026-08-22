@@ -7,7 +7,7 @@ test("simple", async t => {
   await interceptorTest(
     t,
     Interceptor,
-    {},
+    { setup: (t,interceptor) => { t.context.setupDone = 77;} },
     {},
     new Endpoint("ep1"),
     [],
@@ -16,4 +16,6 @@ test("simple", async t => {
       t.pass();
     }
   );
+
+  t.is(t.context.setupDone,77)
 });

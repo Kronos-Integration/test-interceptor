@@ -56,7 +56,7 @@ export async function interceptorTest(
   const instance = new factory(config);
 
   if (setup) {
-    setup(instance);
+    setup(t, instance);
   }
 
   instance.reset();
