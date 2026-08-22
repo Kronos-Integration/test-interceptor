@@ -52,7 +52,10 @@ export async function interceptorTest(
   asserts = () => {}
 ) {
   const setup = config?.setup;
-  delete config.setuo;
+  if (setup) {
+    delete config.setuo;
+  }
+
   const instance = new factory(config);
 
   if (setup) {
