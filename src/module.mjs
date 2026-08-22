@@ -7,7 +7,9 @@ export const logger = {
   warn: (...args) => console.log(...args),
   info: (...args) => console.log(...args),
   debug: (...args) => console.log(...args),
-  trace: (...args) => console.log(...args)
+  trace: (...args) => console.log(...args),
+  crit: (...args) => console.log(...args),
+  fatal: (...args) => console.log(...args)
 };
 
 export function dummyEndpoint(name, owner = logger) {
@@ -21,7 +23,8 @@ export function dummyEndpoint(name, owner = logger) {
     toString() {
       return this.name;
     },
-    owner
+    owner,
+    ...logger
   };
 }
 
